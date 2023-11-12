@@ -670,7 +670,7 @@ aside.none {
 /* textsentiment */
 .textsentiment {
   padding: 20px;
-  width: 200px;
+  width: 220px;
 }
 .textsentiment ul {
   padding-top: 25px;
@@ -759,13 +759,13 @@ aside.none {
   font-size: 12px;
 }
 .styleInfo li:nth-of-type(1) span:nth-child(2) {
-  font-weight: 500;
+  font-weight: 450;
   font-size: 12px;
 }
 
 /* mainContent3 텍스트 리뷰 요약, 정리 */
 .mainContent3 {
-  height: 430px;
+  height: 600px;
   display: flex;
 }
 

@@ -401,18 +401,18 @@
           <div class="products">
             <div class="product1", id="product"><a href="review.html">
               <div class="ranked">1위</div>
-              <img src="img/products/product1.jpg" alt="제품1">
+              <img src="img/products/product1.jpg" alt="제품1" onclick="redirectToReviewPage()">
               <div class="productBrand">코튼 워셔블 하찌 하프집업 니트</div>
               <div class="productName">Cotton Washable Hachi Half...</div>
               <div class="productPrice">49,900원</div>
             </a></div>
-            <div class="product2" id="product">
+            <div class="product2" id="product"><a href="review2.html">
               <div class="ranked">2위</div>
-              <img src="img/products/product2.jpg" alt="제품2">
+              <img src="img/products/product2.jpg" alt="제품2" onclick="redirectToReviewPage()">
               <div class="productBrand">가까이 유니언즈</div>
               <div class="productName">원턱 와이드 스웨트팬츠 그레이</div>
               <div class="productPrice">34,800원</div> 
-            </div>
+            </a></div>
             <div class="product3" id="product">
               <div class="ranked">3위</div>
               <img src="img/products/product3.jpg" alt="제품3">
@@ -665,9 +665,16 @@
         swipeToSlide: false,
         swipe: false,
         pauseOnFocus: false
+  
+  
       });
     });
+
+    function redirectToReviewPage() {
+      window.location.href = 'review.html';
+  }
   </script>
+
 
 </body>
 </html>
