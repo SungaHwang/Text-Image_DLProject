@@ -13,7 +13,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import nltk
 nltk.download('punkt')
 
-train_data = pd.read_csv('Data/train_data.csv')
+train_data = pd.read_csv('Text_Summarization/Data/train_data.csv')
 
 review_list = []
 for i in range(0, len(train_data['Review'])):
@@ -33,8 +33,8 @@ def summary(row):
                              num_beams = 21,  
                              repetition_penalty = 1000.1,
                              temperature = 1000000,
-                             min_length = 10,
-                             max_length = 32,
+                             min_length = 3,
+                             max_length = 12,
                              top_k = 0.92,
                              top_p = 0.92,
                              eos_token_id = 1)
@@ -47,4 +47,4 @@ df['predicted'] = df.apply(summary, axis=1)
 
 print(df[['text', 'predicted']])
 
-df.to_csv('train_review_label2.csv', encoding= 'utf-8-sig', index=False, header=True)
+df.to_csv('train_review_label3.csv', encoding= 'utf-8-sig', index=False, header=True)
