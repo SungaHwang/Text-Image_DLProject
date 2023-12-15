@@ -1,7 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 def summarize_and_save(input_file, output_file, tokenizer, model):
-    # Read data from file
     with open(input_file, "r", encoding="utf-8") as f:
         data = f.read()
 
@@ -10,8 +9,8 @@ def summarize_and_save(input_file, output_file, tokenizer, model):
                                  max_length=500,
                                  min_length=50,
                                  length_penalty=2.0,
-                                 num_beams=4,
-                                 repetition_penalty = 10.1,
+                                 num_beams=8,
+                                 repetition_penalty = 15.1,
                                  early_stopping=True)
 
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
@@ -29,5 +28,5 @@ model = AutoModelForSeq2SeqLM.from_pretrained("lcw99/t5-base-korean-text-summary
 
 for data_type in data_types:
     input_file_path = f"Text_data/test_data_{data_type}.txt"
-    output_file_path = f"Text_Summarization/Results/sum_test_data_{data_type}.txt"
+    output_file_path = f"Text_Summarization/Results/sum2_test_data_{data_type}.txt"
     summarize_and_save(input_file_path, output_file_path, tokenizer, model)
