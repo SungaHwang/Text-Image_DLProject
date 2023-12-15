@@ -5,13 +5,13 @@ def summarize_and_save(input_file, output_file, tokenizer, model):
     with open(input_file, "r", encoding="utf-8") as f:
         data = f.read()
 
-    inputs = tokenizer.encode("summarize: " + data, return_tensors="pt", max_length=10245, truncation=True)
+    inputs = tokenizer.encode("summarize: " + data, return_tensors="pt", max_length=8196, truncation=True)
     summary_ids = model.generate(inputs,
                                  max_length=500,
-                                 min_length=100,
-                                 repetition_penalty = 1000.1,
+                                 min_length=50,
                                  length_penalty=2.0,
-                                 num_beams=21,
+                                 num_beams=4,
+                                 repetition_penalty = 10.1,
                                  early_stopping=True)
 
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
