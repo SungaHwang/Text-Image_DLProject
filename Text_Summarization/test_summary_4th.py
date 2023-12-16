@@ -1,11 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 
-device = (
-    "cuda"
-    if torch.cuda.is_available()
-    else "cpu"
-)
+print(f"MPS 장치를 지원하도록 build가 되었는가? {torch.backends.mps.is_built()}")
+print(f"MPS 장치가 사용 가능한가? {torch.backends.mps.is_available()}") 
+
+device = torch.device("mps")
 print(f"Using {device} device")
 
 def summarize_and_save(input_file, output_file, tokenizer, model):
@@ -14,12 +13,11 @@ def summarize_and_save(input_file, output_file, tokenizer, model):
 
     inputs = tokenizer.encode("summarize: " + data, return_tensors="pt", max_length=8196, truncation=True).to(device)
     summary_ids = model.generate(inputs,
-                                 max_length=400,
-                                 min_length=50,
-                                 length_penalty=2.0,
-                                 num_beams=8,
-                                 repetition_penalty=2.0,
-                                 early_stopping=True)
+                                    num_beams = 3,  
+                                    repetition_penalty = 1.0,
+                                    length_penalty=1.0,                                    
+                                    min_length = 50,
+                                    max_length = 500)
 
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
@@ -33,6 +31,7 @@ data_types = ['상의_가격', '상의_디자인', '상의_배송', '상의_색�
 
 tokenizer = AutoTokenizer.from_pretrained("digit82/kobart-summarization")
 model = AutoModelForSeq2SeqLM.from_pretrained("digit82/kobart-summarization")
+model.to(device)
 
 for data_type in data_types:
     input_file_path = f"Text_data/test_data_{data_type}.txt"
