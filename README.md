@@ -22,4 +22,5 @@
 - 김건일: [Crawling](https://github.com/SungaHwang/Text-Image_DLProject/tree/main/Crawling)
 
 ### 4. 분석 결과
+- [최종 PPT](https://github.com/SungaHwang/Text-Image_DLProject/tree/main/%EC%B5%9C%EC%A2%85%EA%B2%B0%EA%B3%BCPPT)
 <img width="524" alt="스크린샷 2023-12-18 오후 4 52 39" src="https://github.com/SungaHwang/Text-Image_DLProject/assets/74399508/fc7753ad-2147-4d29-8a52-d2b25567712a">
