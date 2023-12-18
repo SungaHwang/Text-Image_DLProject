@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .highlight {
+        background-color:  #ffecb3;
+        font-weight: bold;
+      }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매후기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,700,0,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20,100,1,0" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <script src="https://kit.fontawesome.com/df8090d216.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="head">
+      <div class="musinsa">MUSINSA</div>
+      <div class="search">
+        <input type="text" size="">
+        <div class="searchBtn">
+          <span class="material-symbols-outlined">search</span>
+        </div>
+      </div>
+      <div class="rollingRanking">
+        <div class="rankings">
+          <div class="ranking1">
+            <li>1위:후드티</li>
+            <ul>
+              <li><span class="material-symbols-sharp">
+                change_history
+              </span></li>
+              <li><span>1</span></li>
+            </ul>
+          </div>
+          <div class="ranking2">
+            <li>2등:니트</li>
+            <ul>
+              <li><span class="material-symbols-sharp">
+                change_history
+              </span></li>
+              <li><span>5</span></li>
+            </ul>
+          </div>
+          <div class="ranking3">
+            <li>3등:맨투맨</li>
+            <ul style="color:blue;">
+              <li style="transform: rotate(180deg); height: 25px; margin-bottom:4px;">
+                <span class="material-symbols-sharp">
+                  change_history
+                </span></li>
+              <li><span>2</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="betweenPart"></div>
+    </div>
+    <!-- nav -->
+    <nav>
+      <ul>
+        <li>시즌오프</li>
+        <li class="rankLi">
+          <span>랭킹</span>
+          <ul class="rankLi_">
+            <li>상품</li>
+            <li>브랜드</li>
+            <li>검색어</li>
+          </ul>
+        </li>
+        <li class="updateLi">
+          <span>업데이트</span>
+          <ul class="updateLi_">
+            <li>신상품</li>
+            <li>재입고</li>
+            <li>세일소식</li>
+            <li>이벤트</li>
+            <li>입점</li>
+          </ul>
+        </li>
+        <li class="styleLi">
+          <span>코디</span>
+          <ul class="styleLi_">
+            <li>코디숍</li>
+            <li>코디맵</li>
+            <li>브랜드 스냅</li>
+            <li>스트릿 스냅</li>
+          </ul>
+        </li>
+        <li class="saleLi">
+          <span>세일</span>
+          <ul class="saleLi_">
+            <li>쿠폰</li>
+            <li>세일</li>
+            <li>타임세일</li>
+            <li>기획전</li>
+          </ul>
+        </li>
+        <li class="specialLi">
+          <span>스페셜</span>
+          <ul class="specialLi_">
+            <li>쇼케이스</li>
+            <li>스페셜 이슈</li>
+            <li>단독상품</li>
+          </ul>
+        </li>
+        <li class="magazineLi">
+          <span>매거진</span>
+          <ul class="magazineLi_">
+            <li>뉴스</li>
+            <li>매거진</li>
+            <li>쇼케이스</li>
+            <li>큐레이팅</li>
+            <li>커뮤니티</li>
+            <li>브랜드 구인</li>
+          </ul>
+        </li>
+        <li class="tvLi">
+          <span>TV</span>
+          <ul class="tvLi_">
+            <li>TV</li>
+            <li>라디오</li>
+          </ul>
+        </li>
+        <li class="eventLi">
+          <span>이벤트</span>
+          <ul class="eventLi_">
+            <li>래플</li>
+            <li>랜덤 이벤트</li>
+            <li>룩북 이벤트</li>
+            <li>체험단</li>
+            <li>회원후기</li>
+          </ul>
+        </li>
+        <li>브랜드</li>
+      </ul>
+    </nav>
+  </header>
+  <!-- article -->
+  <div class="separate"></div>
+  <div class="cover">
+    <article class="myInfo">
+      <div class="login">로그인</div>
+      <div class="mypage">마이페이지</div>
+      <div class="recentlyViewd">최근 본 상품</div>
+      <div class="like">좋아요</div>
+      <div class="shoppingBasket">장바구니</div>
+      <div class="orderInquiry">주문배송조회</div>
+      <div class="customerService">고객센터</div>
+    </article>
+  </div>
+  <main>
+    <!--주요 내용-->
+    <div class="mainContent">
+      <!-- 리뷰 요약 section -->
+      <div class="mainContent3_cover">
+        <section class="mainContent3">
+            <!--해당 옷에 대한 정보-->
+          <div class="product1", id="product_rv">
+            <img src="img/products/product1.jpg" alt="제품1">
+            <div class="productrvBrand">키뮤어</div>
+            <div class="productrvName">코튼 워셔블 하찌 하프집업 니트...</div>
+            <div class="productrvPrice">49,900원</div>
+          </a></div>
+          <div class="textsentiment">
+            <h3>항목별 만족도</h3>
+            <ul>
+              <li>가격 - 75.88% 긍정</li>
+              <li><progress value="75.88" max="100"></progress></li>
+              <li>디자인 - 80.52% 긍정</li>
+              <li><progress value="80.52" max="100"></progress></li>
+              <li>배송 - 66.49% 긍정</li>
+              <li><progress value="66.49" max="100"></progress></li>
+              <li>색감 - 81.90% 긍정</li>
+              <li><progress value="81.90" max="100"></progress></li>
+              <li>품질 - 79.00% 긍정</li>
+              <li><progress value="81.90" max="100"></progress></li>
+              <li>핏 - 76.10% 긍정</li>
+              <li><progress value="81.90" max="100"></progress></li>
+            </ul>
+          </div>
+
+          <div class="textreview">
+            <h3>항목별 리뷰 요약</h3>
+            <ul>
+              <li>가격</li>
+              <li><span class="highlight">저렴한 가격</span> 에 좋은 품질의 니트를 구매할 수 있어 매우 만족하고 잘 입고 다닐 것 같고, <span class="highlight">가성비가 너무 좋고</span> 색감도 예쁘고 핏도 좋아서 데일리로 입기 좋다.</li>
+            </ul>
+            <ul>
+              <li>디자인</li>
+              <li><span class="highlight">겨울에 데일리로 입기 좋은 디자인</span>의 하프집업을 구매했는데 가격도 저렴하고 핏도 좋고 너무 맘에 들며, 사이즈는 정사이즈이고 색상은 밝은 색이라 무난하게 잘 입을 수 있을 것 같다.</li>
+            </ul>
+            <ul>
+              <li>배송</li>
+              <li><span class="highlight">배송이 빠르고</span> 가격도 저렴하고 사이즈가 정사이즈로 나와서 너무 마음에 들고 잘 입고 다닐거 같고, 다른 색상으로 하나 더 주문할 예정이다.</li>
+            </ul>
+          </div>
+          <div class="textreview2">
+            <ul>
+              <li>색감</li>
+              <li><span class="highlight">오트밀 색상이 너무 이뻐</span>서 구매했는데 사이즈가 조금 더 컸으면 하는 아쉬움이 있지만 <span class="highlight">색감도 좋고</span> 핏도 좋아서 데일리로 잘 입고 다닐 것 같다.</li>
+            </ul>
+            <ul>
+              <li>품질</li>
+              <li>저렴한 가격에 <span class="highlight">좋은 퀄리티</span>의 하프집업을 구매할 수 있어서 매우 만족하며 <span class="highlight">겨울에도 입을 수 있을 것 같은 느낌</span>이 들어서 잘 입고 다닐거 같다.</li>
+            </ul>
+            <ul>
+              <li>핏</li>
+              <li>키뮤어 제품은 저렴한 가격에 구매할 수 있고 <span class="highlight">사이즈도 정사이즈</span>로 잘 맞고 <span class="highlight">오버핏</span>으로 입을 수 있는 옷이라 가성비가 좋은 것 같다.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+
+      <!--매치 색상 정리 section-->
+      <div class="mainContent2_cover">
+        <section class="mainContent2">
+          <div class="style">
+            <h3>매치한 컬러 Top5</h3>
+            <ul>
+              <li>grey & black</li>
+              <li>grey & grey</li>
+              <li>black & black</li>
+              <li>black & grey</li>
+              <li>brown & black</li>
+            </ul>
+          </div>
+          <div class="stylePhoto">
+            <div class="style1" id="style">
+              <img src="../../test_img/images/31596170.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/shortpants.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>shortpants</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style2" id="style">
+              <img src="../../test_img/images/31941893.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/trainingpants.jpg" alt="">
+                
+                <ul>
+                  <li>
+                    <span>trainingpants</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style3" id="style">
+              <img src="../../test_img/images/32357743.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/slacks.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>slacks</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style4" id="style">
+              <img src="../../test_img/images/52818654.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/denimpants.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>denimpants</span>
+                </ul>
+              </div>
+            </div>
+            <div class="style5" id="style">
+              <img src="../../test_img/images/32291300.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/denimpants.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>denimpants</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!--스타일 군집화 section-->
+      <div class="mainContent2_cover">
+        <section class="mainContent2">
+          <div class="style">
+            <h3>매치한 하의 카테고리 Top5</h3>
+            <ul>
+              <li>denimpants</li>
+              <li>slacks</li>
+              <li>cottonpants</li>
+              <li>trainingpants</li>
+              <li>shortpants</li>
+            </ul>
+          </div>
+          <div class="stylePhoto">
+            <div class="style1" id="style">
+              <img src="..\..\test_img\images\33990001.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/washed.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>washed jeans</span>
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style2" id="style">
+              <img src="..\..\test_img\images\36790930.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/middleblue.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>middle blue</span>
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style3" id="style">
+              <img src="..\..\test_img\images\52091846.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/darkblue.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>dark blue</span>
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style4" id="style">
+              <img src="..\..\test_img\images\34068147.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/lightblue.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>light blue</span>
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="style5" id="style">
+              <img src="..\..\test_img\images\35857876.jpg" alt="">
+              <div class="styleInfo">
+                <img src="img/style/lightblue.jpg" alt="">
+                <ul>
+                  <li>
+                    <span>light blue</span>
+                    <span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer_cover">
+        <footer>
+          <ul class="otherInfo">
+            <li>회사소개</li>
+            <li>공지사항</li>
+            <li>이벤트 공지</li>
+            <li>입점/제휴/대량구매</li>
+            <li>개인정보처리방침</li>
+            <li>영상정보처리기기 운영 및 관리방침</li>
+            <li>이용약관</li>
+            <li>로고 다운로드</li>
+          </ul>
+          <div class="musinsaInfo">
+            <ul>
+              <li>무신사 편집팀</li>
+              <li>서울특별시 강남구 신사동 640-2</li>
+              <li>로빈명품관 지하1층, 무신사 편집팀</li>
+              <li>(무신사 스토어 반송지 아님, 해당주소 반송불가)</li>
+            </ul>
+            <ul>
+              <li>무신사 스토어</li>
+              <li>(17759) 경기도 평택시 신장로 55 CJ대한통운</li>
+              <li>평택합정집배점 내 무신사 물류센터</li>
+              <li>(무신사 스토어 자체 배송 상품 물류센터)</li>
+              <li>(배송센터 직접 물건 수령 불가)</li>
+            </ul>
+            <ul>
+              <li>고객센터</li>
+              <li>
+                <span>1544 - 7199</span>
+                <span>1:1문의</span>
+                <span>이메일</span>
+              </li>
+              <li>평일 오전 9시 - 오후 6시</li>
+              <li>(상품 문의는 각 상품 페이지에서 [문의하기] 등록)</li>
+              <li></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+      <div class="otherExplan_cover">
+        <div class="otherExplanation">
+          <ul>
+            <li>100% AUTHENTIC</li>
+            <li>무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.</li>
+          </ul>
+          <ul>
+            <li>주식회사 무신사 (MUSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1) | 사업자등록번호 : 211-88-79575 |</li>
+            <li>통신판매업신고 : 2022-서울성동-01952 | 대표 : 한문일 | 개인정보보호책임자 : 이인섭(help@musinsa.com) ｜ 호스팅사업자 : (주)무신사</li>
+          </ul>
+          <ul>
+            <li>일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서</li>
+            <li>상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</li>
+          </ul>
+          <ul>
+            <li>당사는 고객님의 안전거래를 위해 관련 법률에 의거하여 NHN KCP의 에스크로서비스를 적용하고 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="musinsaBanner">
+        <div>FASHION WEB MAGAZINE / LIFE STYLE SELECET SHOP</div>
+        <div>WWW.MUSINSA.COM</div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.rankings').slick({
+        slide: 'div',
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        vertical: true,
+        slidesToScroll: 1,
+        arrows: false,
+        adaptiveHeight: true,
+        pauseOnHover: false,
+        swipeToSlide: false,
+        swipe: false,
+        pauseOnFocus: false
+      });
+    });
+  </script>
+</body>
+</html>
